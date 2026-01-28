@@ -1,0 +1,145 @@
+//1)largest of three numbers
+import java.util.Scanner;
+public class day2 {
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+    System.out.println("enter a:");
+		int a=sc.nextInt();
+		System.out.println("enter b:");
+		int b=sc.nextInt();
+		System.out.println("enter c:");
+		int c=sc.nextInt();
+		if(a>b) 
+			if(a>c)
+				System.out.println("a is greater :" +a);
+		
+		if(b>a) 
+			if(b>c)
+				System.out.println("b is greater :" +b);
+		
+		else
+			System.out.println("c is greater :" +c);
+		}
+}
+//2)swapping using mul and div
+import java.util.Scanner;
+public class day2 {
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter a number:");
+		int a=sc.nextInt();
+		System.out.println("enter b number:");
+		int b=sc.nextInt();
+		a=(a*b);
+		b=(a/b);
+		a=(a/b);
+		System.out.println(a);
+		System.out.println(b);
+	}
+}
+//3)switch case example
+import java.util.Scanner;
+public class day2 {
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter the temperature:");
+		int temp=sc.nextInt();
+		switch(temp)
+		{
+		case 40:
+			System.out.println("the temperature"+temp+"is high");
+			break;
+		case 30:
+			System.out.println("the temperature"+temp+"is moderate");
+			break;
+		case 10:
+			System.out.println("the temperature"+temp+"is low");
+			break;
+		default:
+			System.out.println("Invalid");
+		}
+	}
+}
+
+//4)print even numbers in a given range 
+import java.util.Scanner;
+public class day2 {
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter m:");
+		int m=sc.nextInt();
+		System.out.println("enter n:");
+		int n=sc.nextInt();
+		while(m<=n)
+		{
+			if(m%2==0)
+			{
+			System.out.println(m);
+		}
+			m++;
+	}
+}
+}
+
+//5)print multiplication table give range
+import java.util.Scanner;
+public class day2 {
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter m:");
+		int m=sc.nextInt();
+		System.out.println("enter n:");
+		int n=sc.nextInt();
+		while(m<=n)
+		{
+			int i=1;
+			while(i<=10)
+			{
+				System.out.println(m+"*"+i+"="+(m*i));
+				i++;
+			}
+			m++;
+			System.out.println("");
+		}
+	}
+}
+
+//6)2405->exclude zeros
+import java.util.Scanner;
+public class day2 {
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter a number:");
+		int n=sc.nextInt();
+		int rev=0;
+		while(n>0)
+		{
+			int dig=n%10;
+			if(dig!=0)
+			 rev=rev*10+dig;
+			n/=10;
+			
+		}
+		System.out.println(rev);
+		}
+}
+//7)sum of even digits of a given number
+import java.util.Scanner;
+public class day2 {
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter a number:");
+		int n=sc.nextInt();
+		int sum=0;
+		while(n>0)
+		{
+			int dig=n%10;
+			if(dig%2==0) {
+			 sum+=dig;
+		}
+			n/=10;
+			
+		}
+		System.out.println(sum);
+		}
+}
