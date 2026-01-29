@@ -4,7 +4,6 @@ DAY 3 – JAVA FULL STACK
 2. Variables
 3. Types of Variables
 4. Operators
-Each topic includes:
 */
 /*
 1. IDENTIFIERS
@@ -163,4 +162,5 @@ Operators are symbols used to perform operations on variables.
         obj.operatorsExample();
     }
 }
+
 
