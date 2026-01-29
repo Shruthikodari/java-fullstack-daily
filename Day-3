@@ -1,0 +1,166 @@
+/*
+DAY 3 – JAVA FULL STACK 
+1. Identifiers
+2. Variables
+3. Types of Variables
+4. Operators
+Each topic includes:
+*/
+/*
+1. IDENTIFIERS
+Identifiers are names given to program elements such as:
+- Class names
+- Method names
+- Variable names
+    Rules for Identifiers:
+    1. Can contain alphabets (A–Z, a–z), digits (0–9), _ and $
+    2. Cannot start with a digit
+    3. Cannot use Java reserved keywords
+    4. Case-sensitive
+    5. No spaces allowed
+    Examples:
+    Valid   → studentName, _total, $salary
+    Invalid → 1number, class, total-marks
+*/
+// Example Program for Identifiers
+    public class Day3_JavaFullStack {
+    void identifierExample() {
+        int studentAge = 20;
+        String student_Name = "Java";
+        double $fees = 25000.50;
+        System.out.println("\n--- Identifier Example ---");
+        System.out.println("Student Age: " + studentAge);
+        System.out.println("Student Name: " + student_Name);
+        System.out.println("Fees: " + $fees);
+    }
+    public static void main(String[] args) {
+     Day3_JavaFullStack obj = new Day3_JavaFullStack();
+        obj.identifierExample();
+    }
+}
+
+
+/*
+2. VARIABLES
+A variable is a container used to store data values.
+Syntax:
+    dataType variableName = value;
+    Types of data stored in variables:
+    - int → integers
+    - double → decimal numbers
+    - char → single character
+    - String → text
+    Example:
+    int age = 21;
+*/
+
+// Example Program for Variables
+    public class Day3_JavaFullStack {
+    void variableExample() {
+       int age = 21;
+        double salary = 30000.75;
+        char grade = 'A';
+        String course = "Java Full Stack";
+        System.out.println("\n--- Variable Example ---");
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+        System.out.println("Grade: " + grade);
+        System.out.println("Course: " + course);
+    }
+    public static void main(String[] args) {
+    Day3_JavaFullStack obj = new Day3_JavaFullStack();
+        obj.variableExample();
+    }
+}
+
+
+/*
+3.TYPES OF VARIABLES
+Java supports three types of variables:
+    1. Local Variable
+       - Declared inside a method
+       - Scope limited to the method
+       - Must be initialized before use
+
+    2. Instance Variable
+       - Declared inside class, outside methods
+       - Belongs to object
+       - Each object has its own copy
+
+    3. Static Variable
+       - Declared using static keyword
+       - Belongs to class
+       - Shared among all objects
+*/
+
+    // Instance Variables
+    public class Day3_JavaFullStack {
+    int rollNo = 101;
+    String name = "Java";
+    // Static Variable
+    static String institute = "Java Full Stack Academy";
+    // Example Program for Types of Variables
+    void variableTypesExample() {
+    // Local Variables
+        int marks = 88;
+        char grade = 'A';
+        System.out.println("\n--- Types of Variables Example ---");
+        System.out.println("Roll No (Instance): " + rollNo);
+        System.out.println("Name (Instance): " + name);
+        System.out.println("Institute (Static): " + institute);
+        System.out.println("Marks (Local): " + marks);
+        System.out.println("Grade (Local): " + grade);
+    }
+    public static void main(String[] args) {
+    Day3_JavaFullStack obj =new Day3_JavaFullStack();
+        obj.variableTypesExample();
+    }
+}
+
+
+/*
+4. OPERATORS
+Operators are symbols used to perform operations on variables.
+    Types of Operators:
+    1. Arithmetic Operators   → +  -  *  /  %
+    2. Relational Operators   → >  <  >=  <=  ==  !=
+    3. Logical Operators      → &&  ||  !
+    4. Assignment Operators   → =  +=  -=  *=  /=
+    5. Unary Operators        → ++  --
+*/
+
+    // Example Program for Operators
+    public class Day3_JavaFullStack {
+    void operatorsExample() {
+     int a = 10, b = 5;
+     System.out.println("\n--- Operators Example ---");
+
+        // Arithmetic
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+
+        // Relational
+        System.out.println("a > b: " + (a > b));
+        System.out.println("a == b: " + (a == b));
+
+        // Logical
+        System.out.println("(a > b && b > 0): " + (a > b && b > 0));
+        System.out.println("(a > b || b > 20): " + (a > b || b > 20));
+
+        // Assignment
+        a += 5;
+        System.out.println("a += 5: " + a);
+
+        // Unary
+        System.out.println("++b: " + (++b));
+        System.out.println("--b: " + (--b));
+    }
+    public static void main(String[] args) {
+    Day3_JavaFullStack obj = new Day3_JavaFullStack();
+        obj.operatorsExample();
+    }
+}
+
