@@ -162,7 +162,7 @@ class SwitchStatementProgram {
 
 
 
-2. LOOPING STATEMENTS
+--2. LOOPING STATEMENTS--
 Looping statements are used to repeat a block of code
 until a specific condition becomes false.
 
@@ -242,7 +242,7 @@ class DoWhileLoopProgram {
 
 
 
-3. JUMP STATEMENTS
+--3. JUMP STATEMENTS--
 
 Jump statements are used to transfer control
 from one part of the program to another.
@@ -311,3 +311,4 @@ class ReturnStatementProgram {
         System.out.println("Sum: " + result);
     }
 }
+
