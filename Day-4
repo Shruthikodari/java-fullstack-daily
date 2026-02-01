@@ -1,0 +1,313 @@
+DAY 4 – CONTROL STATEMENTS IN JAVA
+
+TYPES OF CONTROL STATEMENTS IN JAVA
+
+Java control statements are used to control the flow of execution
+of a program. By default, Java executes code sequentially
+from top to bottom. Control statements allow the program
+to make decisions, repeat tasks, and jump to different parts
+of the code.
+
+Java provides three main types of control statements:
+
+1. Decision Making Statements
+2. Looping Statements
+3. Jump Statements
+
+
+--1. DECISION MAKING STATEMENTS--
+
+Decision making statements are used to execute code
+based on conditions. A condition is an expression
+that evaluates to either true or false.
+
+**IF STATEMENT**
+
+The if statement is used when a block of code
+needs to be executed only if a given condition is true.
+If the condition is false, the block is skipped.
+Important Points:
+- Condition must return boolean value
+- Used for single-condition checking
+
+Real-world example:
+Checking voting eligibility
+
+
+class IfStatementProgram {
+
+    void checkVotingEligibility() {
+        int age = 20;
+
+        if (age >= 18) {
+            System.out.println("Eligible to vote");
+        }
+    }
+
+    public static void main(String[] args) {
+        IfStatementProgram obj = new IfStatementProgram();
+        obj.checkVotingEligibility();
+    }
+}
+
+
+**IF-ELSE STATEMENT**
+
+The if-else statement is used when there are exactly
+two possible outcomes. One block executes if the
+condition is true and the other executes if it is false.
+
+Important Points:
+- Only one block executes
+- Improves clarity in decision making
+
+Real-world example:
+Checking even or odd number
+
+class IfElseStatementProgram {
+    void checkEvenOdd() {
+        int number = 9;
+        if (number % 2 == 0) {
+            System.out.println("Even number");
+        } else {
+            System.out.println("Odd number");
+        }
+    }
+
+    public static void main(String[] args) {
+        IfElseStatementProgram obj = new IfElseStatementProgram();
+        obj.checkEvenOdd();
+    }
+}
+
+
+
+**ELSE-IF LADDER**
+
+The else-if ladder is used when multiple conditions
+need to be tested one after another.
+
+Conditions are checked from top to bottom.
+The first condition that becomes true is executed.
+
+Important Points:
+- Order of conditions is important
+- Only one block executes
+
+Real-world example:
+Student grading system
+
+class ElseIfLadderProgram {
+  void calculateGrade() {
+        int marks = 78;
+        if (marks >= 90) {
+            System.out.println("Grade A");
+        } else if (marks >= 75) {
+            System.out.println("Grade B");
+        } else if (marks >= 60) {
+            System.out.println("Grade C");
+        } else {
+            System.out.println("Fail");
+        }
+    }
+
+    public static void main(String[] args) {
+        ElseIfLadderProgram obj = new ElseIfLadderProgram();
+        obj.calculateGrade();
+    }
+}
+
+
+
+**SWITCH STATEMENT**
+
+The switch statement is a multi-branch decision
+making statement. It executes code based on the
+value of a variable or expression.
+
+Important Points:
+- Used for fixed number of choices
+- break prevents fall-through
+- default executes when no case matches
+
+Real-world example:
+Menu-driven applications
+
+class SwitchStatementProgram {
+
+    void menuExample() {
+        int choice = 2;
+
+        switch (choice) {
+            case 1:
+                System.out.println("Create Account");
+                break;
+            case 2:
+                System.out.println("Login");
+                break;
+            case 3:
+                System.out.println("View Profile");
+                break;
+            default:
+                System.out.println("Invalid Choice");
+        }
+    }
+
+    public static void main(String[] args) {
+        SwitchStatementProgram obj = new SwitchStatementProgram();
+        obj.menuExample();
+    }
+}
+
+
+
+
+2. LOOPING STATEMENTS
+Looping statements are used to repeat a block of code
+until a specific condition becomes false.
+
+**FOR LOOP**
+The for loop is an entry-controlled loop.
+It is used when the number of iterations is known in advance.
+
+Real-world example:
+Printing numbers or processing fixed data sets
+
+class ForLoopProgram {
+      void printNumbers() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Value: " + i);
+        }
+    }
+public static void main(String[] args) {
+        ForLoopProgram obj = new ForLoopProgram();
+        obj.printNumbers();
+    }
+}
+
+**WHILE LOOP**
+The while loop is an entry-controlled loop.
+The condition is checked before execution.
+Important Point:
+- Loop may execute zero times
+
+Real-world example:
+ATM withdrawal process
+
+
+class WhileLoopProgram {
+
+    void atmExample() {
+        int balance = 4000;
+        int withdrawAmount = 1000;
+
+        while (balance >= withdrawAmount) {
+            balance -= withdrawAmount;
+            System.out.println("Remaining Balance: " + balance);
+        }
+    }
+
+    public static void main(String[] args) {
+        WhileLoopProgram obj = new WhileLoopProgram();
+        obj.atmExample();
+    }
+}
+
+
+
+**DO-WHILE LOOP**
+
+The do-while loop is an exit-controlled loop.
+It executes the loop body at least once.
+
+Real-world example:
+OTP verification
+
+class DoWhileLoopProgram {
+
+    void otpExample() {
+        int attempt = 1;
+
+        do {
+            System.out.println("OTP Attempt: " + attempt);
+            attempt++;
+        } while (attempt <= 3);
+    }
+
+    public static void main(String[] args) {
+        DoWhileLoopProgram obj = new DoWhileLoopProgram();
+        obj.otpExample();
+    }
+}
+
+
+
+3. JUMP STATEMENTS
+
+Jump statements are used to transfer control
+from one part of the program to another.
+
+**BREAK STATEMENT**
+
+The break statement is used to immediately
+terminate a loop or switch statement.
+
+class BreakStatementProgram {
+
+    void breakExample() {
+        for (int i = 1; i <= 10; i++) {
+            if (i == 6) {
+                break;
+            }
+            System.out.println(i);
+        }
+    }
+
+    public static void main(String[] args) {
+        BreakStatementProgram obj = new BreakStatementProgram();
+        obj.breakExample();
+    }
+}
+
+
+
+**CONTINUE STATEMENT**
+
+The continue statement skips the current iteration
+and continues with the next iteration of the loop.
+
+class ContinueStatementProgram {
+
+    void continueExample() {
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) {
+                continue;
+            }
+            System.out.println(i);
+        }
+    }
+
+    public static void main(String[] args) {
+        ContinueStatementProgram obj = new ContinueStatementProgram();
+        obj.continueExample();
+    }
+}
+
+
+**RETURN STATEMENT**
+
+The return statement is used to end the execution
+of a method and optionally return a value.
+
+class ReturnStatementProgram {
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        ReturnStatementProgram obj = new ReturnStatementProgram();
+        int result = obj.add(10, 20);
+        System.out.println("Sum: " + result);
+    }
+}
